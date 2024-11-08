@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasiku</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #E9EED9;
+            color: #333;
+            padding: 20px;
+            overflow-x: hidden; /* Hide horizontal scrollbar on the entire page */
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .slider img {
+            width: 100%;
+            display: none;
+            border-radius: 5px;
+        }
+
+        .slider img.active {
+            display: block;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 10px);
+            flex: 1 1 45%;
+            transition: transform 0.3s ease;
+        }
+
+        .card:active {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .testimonials {
+           display: flex;
+           gap: 20px;
+           margin-top: 20px;
+           overflow-x: auto; /* Allow horizontal scrolling */
+           -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+           flex-wrap: nowrap;
+}
+
+        .testimonial {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 10px);
+            flex: 1 1 45%;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:active {
+            transform: scale(1.05);
+        }
+
+        .testimonial img {
+            border-radius: 50%;
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .testimonial p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .testimonial button {
+            background-color: #CBD2A4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .testimonial button:hover {
+            background-color: #ABBA7C;
+        }
+
+        .footer {
+            font-size: 0.8rem;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #82aa43;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-section p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .download-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            margin: 10px 0;
+            background-color: #000;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-family: Times New Roman, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            transition: background-color 0.3s;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-button:hover {
+            background-color: #333;
+        }
+
+        .download-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .download-button span {
+            display: block;
+        }
+
+        .download-button .line1 {
+            font-size: 14px;
+        }
+
+        .download-button .line2 {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Image Slider -->
+    <div class="header">
+        <div class="slider">
+            <img src="header1.png" class="active" alt="Slide 1">
+            <img src="header2.png" alt="Slide 2">
+            <img src="header3.png" alt="Slide 3">
+        </div>
+    </div>
+
+    <!-- Section: Profile Cards -->
+    <div class="section">
+        <h2>My short profile</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="crushku.png" alt="Icon">
+                <h3>Crushku</h3>
+                <p>You are someone I will always admire</p>
+            </div>
+            <div class="card">
+                <img src="devku.png" alt="Icon">
+                <h3>Devku</h3>
+                <p>This is the result of my combination</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Section: Testimonials with Additional Boxes -->
+<div class="section">
+    <h2>My recommendation</h2>
+    <div class="testimonials">
+        <div class="testimonial">
+            <img src="bookku.gif" alt="User Image">
+            <h4>Bookku</h4>
+            <p>Hi everyone, we are here with an application that can recommend you special books in my opinion</p>
+            <a href="bookku.html"><button>Read more</button></a>
+        </div>
+        <div class="testimonial">
+            <img src="kalkulatorku.gif" alt="User Image">
+            <h4>kalkulatorku</h4>
+            <p>Hi everyone, this is a Calculator application. In the application there is a secret function!!!</p>
+            <a href="kalkulatorku.html"><button>Read more</button></a>
+        </div>
+        <div class="testimonial">
+            <img src="koleksiku.gif" alt="User Image">
+            <h4>Koleksiku</h4>
+            <p>Hi everyone, this is a Calculator application. In the application there is a secret function!</p>
+            <a href="koleksiku.html"><button>Read more</button></a>
+        </div>
+        <div class="testimonial">
+            <img src="projectku.gif" alt="User Image">
+            <h4>Projectku</h4>
+            <p>Hi everyone, this is a Calculator application. In the application there is a secret function!</p>
+            <a href="projectku.html"><button>Read more</button></a>
+        </div>
+        <div class="testimonial">
+            <img src="more.gif" alt="User Image">
+            <h4>More</h4>
+            <p>Hi everyone, this is a Calculator application. In the application there is a secret function!</p>
+            <a href="more.html"><button>Read more</button></a>
+        </div>
+    </div>
+</div>
+
+    <!-- Android Download Section -->
+    <div class="download-section">
+        <p>Available for Android</p>
+        <a href="https://drive.google.com/uc?export=download&id=1B7QMX9xaWDRtAEgRj9pQ5egWDJz5QDYV" target="_blank" class="download-button">
+            <img src="icon1.png" alt="Android Icon">
+            <div>
+                <span class="line1">free download for</span>
+                <span class="line2">Android</span>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+        setInterval(nextSlide, 5000);
+    </script>
+
+    <!-- Footer Information -->
+    <div class="footer">
+        <p>&copy; Kalkulatorku by <a href="https://www.instagram.com/alfialiframadhann?igsh=ZjlqYjhzNndjZTJ1" target="_blank">alfialiframadhann</a></p>
+    </div>
+</body>
+</html>
